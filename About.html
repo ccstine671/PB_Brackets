@@ -1,7 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>About</title>
-  </head>
-</html> 
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>HTML input type="password"</title> 
+</head> 
+  
+<body> 
+    <h3>HTML input type="password" Example</h3> 
+    <form action="/action_page.php" method="post"> 
+        <label for="email">Email:</label> 
+        <input type="email" name="email" 
+               placeholder="Email Address" 
+               required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> 
+        <br> 
+        <br> 
+        <label for="password">Password:</label> 
+        <input type="password" name="password" 
+               placeholder="Password" required> 
+        <br> 
+        <br> 
+        <input type="submit" value="Login"> 
+    </form> 
+</body> 
+  
+</html>
