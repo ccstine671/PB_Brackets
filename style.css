@@ -37,12 +37,6 @@ html, body{
 .nav-link{
   font-size: 1.1em !important;
 }
-.row {
-  display: flex;
-}
-.column {
-  flex: 50%;
-}
 .btn-primary {
   background-color: #6648b1;
   border: 1px solid #564d7c;
