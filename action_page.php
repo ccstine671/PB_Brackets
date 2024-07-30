@@ -1,7 +1,7 @@
 <?php 
   $realUser = "user";
   $realPass = "1234";
-
+  echo "HELLO";
   if( isset($_POST["username"]) && isset($_POST["password"])) {
     // Do I have the username and passwords set?
     // If yes, check their validity.
