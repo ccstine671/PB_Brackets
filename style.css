@@ -9,8 +9,6 @@ html, body{
 .BlankSpace {
    padding: 20px 30px;
    position: absolute;
-   top: 0;
-   left: 0;
 }
 .customers {
   font-family: Arial, Helvetica, sans-serif;
