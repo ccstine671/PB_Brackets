@@ -9,9 +9,10 @@
 </form>
   
 <script>
-const players = [];
 if (getcookie("PlayerList") != null) {
-  players.push(getcookie("PlayerList"))
+  players.push(getcookie("PlayerList"))}
+else {
+  const players = [];
 }
   
 function removeA(arr) {
