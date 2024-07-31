@@ -4,14 +4,20 @@
 <form>
   <label for="PlayerAdd">Add Player:</label><br>
   <input type="text" id="PlayerAdd" name="PlayerAdd"><br>
-  <input type="submit" value="Submit">
+  <input type="button" value="Add Player" onclick="msg()">
+  <input type="button" value="Remove Player" onclick="msg()">
 </form>
 
 <?php
-echo "I love $Player1!";
+echo "I love you!";
 ?>
   
 <script>
+function SubmitForm() {
+var buySymbol= document.getElementById('PlayerAdd').value;
+var buyShares= document.getElementById('buyShares').value;
+}
+  
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
