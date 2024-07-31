@@ -1,6 +1,13 @@
 <html>
-  <h3>Welcome to NewBracket</h3>
+  <h3>Enter Names Below</h3>
 
+<form>
+  <label for="Player1">Player 1:</label><br>
+  <input type="text" id="Player1" name="Player1"><br>
+  <label for="Player2">Player 2:</label><br>
+  <input type="text" id="Player2" name="Player2"><br>
+</form>
+  
 <script>
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
@@ -32,7 +39,7 @@ function checkCookie() {
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
-       setCookie("username", user, 30);
+       setCookie("username", user, 60);
      }
   }
 }
