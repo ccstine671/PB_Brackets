@@ -13,7 +13,7 @@ echo "I love you!";
 ?>
   
 <script>
-const players = [];
+const players = ['D'];
 
 --Remove Element from array
 function removeA(arr) {
@@ -38,10 +38,12 @@ function AskRemove() {
     alert("Please enter 'yes' or 'no'");
     return AskRemove(question);
   }
+}
   
 function RemovePlayer() {
   if AskRemove() {
     removeA(players, document.getElementById('PlayerAdd').value);
+}
 }
 function AddPlayer() {
 players.push(document.getElementById('PlayerAdd').value);
