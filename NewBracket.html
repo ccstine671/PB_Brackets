@@ -4,8 +4,8 @@
 <form>
   <label for="PlayerAdd">Add Player:</label><br>
   <input type="text" id="PlayerAdd" name="PlayerAdd"><br>
-  <input type="button" value="Add Player" onclick="msg()">
-  <input type="button" value="Remove Player" onclick="msg()">
+  <input type="button" value="Add Player" onclick="AddPlayer()">
+  <input type="button" value="Remove Player" onclick="RemovePlayer()">
 </form>
 
 <?php
@@ -13,7 +13,7 @@ echo "I love you!";
 ?>
   
 <script>
-function SubmitForm() {
+function AddPlayer() {
 var buySymbol= document.getElementById('PlayerAdd').value;
 var buyShares= document.getElementById('buyShares').value;
 }
