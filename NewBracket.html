@@ -67,6 +67,7 @@ function AddPlayer() {
   for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
     name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
 }
+  document.getElementById("namelist").innerHTML = "";
   document.getElementById("namelist").innerHTML = name;
 }
   
