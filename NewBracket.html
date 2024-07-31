@@ -54,7 +54,9 @@ function AskRemove() {
   
 function RemovePlayer() {
   if (AskRemove()) {
+    alert(players)
     removeA(players, document.getElementById('PlayerAdd').value);
+    alert(players)
     setCookie("PlayerList", players, 60);
     checkCookie();
 }
