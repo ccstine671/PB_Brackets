@@ -13,7 +13,10 @@
 <script>
 const players = [];
 if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  players.push(getCookie("PlayerList").split(","));}
+  players.push(getCookie("PlayerList").split(","));
+  document.getElementById("namelist").innerHTML = "";
+  document.getElementById("namelist").innerHTML = getCookie("PlayerList").split(",");
+}
   
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
@@ -48,9 +51,8 @@ function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
   setCookie("PlayerList", players, 60);
   for (let i = 0; i < players.length; i++) {
-    name += "Player " + (i+1) + ": " + players[i] + "<br>";
+    name += "Players: " + players[i] + "<br>";
 }
-  document.getElementById("namelist").innerHTML = "";
   document.getElementById("namelist").innerHTML = name;
 }
   
