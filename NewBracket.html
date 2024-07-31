@@ -41,14 +41,14 @@ function AskRemove() {
 function RemovePlayer() {
   if (AskRemove()) {
     removeA(players, document.getElementById('PlayerAdd').value);
+    setCookie("PlayerList", players, 60);
 }
 }
 function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
   setCookie("PlayerList", players, 60);
-  alert(getCookie("PlayerList"));
   for (let i = 0; i < players.length; i++) {
-    name += "Player " + i + " " + players[i] + "<br>";
+    name += "Player " + i + ": " + players[i] + "<br>";
 }
   document.getElementById("namelist").innerHTML = name;
 }
