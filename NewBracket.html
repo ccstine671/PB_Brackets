@@ -72,7 +72,7 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  let user = getCookie("username");
+  let user = getCookie("PlayerList");
   if (user != "") {
     alert("Welcome again " + user);
   } else {
@@ -84,5 +84,5 @@ function checkCookie() {
 }
 </script>
 
-<!body onload="checkCookie()"></body>
+<body onload="checkCookie()"></body>
 </html>
