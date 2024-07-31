@@ -27,9 +27,11 @@ if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
 }
 
 function ResetList() {
-  players.splice(0,players.length)
-  setCookie("PlayerList", players, 60);
-  document.getElementById("namelist").innerHTML = "";
+  if (AskRemove()) {
+    players.splice(0,players.length)
+    setCookie("PlayerList", players, 60);
+    document.getElementById("namelist").innerHTML = "";
+  }
 }
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
