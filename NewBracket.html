@@ -65,9 +65,8 @@ function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
   setCookie("PlayerList", players, 60);
   for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
-    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i];
+    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
 }
-  name = "Players: " + name_total
   document.getElementById("namelist").innerHTML = name;
 }
   
