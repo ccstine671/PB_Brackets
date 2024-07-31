@@ -15,7 +15,6 @@ echo "I love you!";
 <script>
 const players = ['D'];
 
---Remove Element from array
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
     while (L > 1 && arr.length) {
@@ -27,7 +26,6 @@ function removeA(arr) {
     return arr;
 }
 
---Ask user to verify removal
 function AskRemove() {
   let answer = prompt("Are you sure you want to remove " + document.getElementById('PlayerAdd').value + " (yes or no)");
   if (answer.toLowerCase() === "yes") {
