@@ -23,6 +23,7 @@ if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
     name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
 }
   document.getElementById("namelist").innerHTML = name;
+  name = "";
 }
 
 function ResetList() {
@@ -68,10 +69,9 @@ function AddPlayer() {
   for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
     name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
   }
-  alert(getCookie("PlayerList"));
-  alert(name);
   document.getElementById("namelist").innerHTML = "";
   document.getElementById("namelist").innerHTML = name;
+  name = ""
 }
   
 function setCookie(cname,cvalue,exdays) {
