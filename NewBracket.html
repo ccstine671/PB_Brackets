@@ -15,7 +15,7 @@ name = "";
 name_total = "";
 const players = [];
 if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  alert(getCookie("PlayerList").split(","))
+  alert(getCookie("PlayerList").split(",")[0])
   players.push(getCookie("PlayerList").split(","));
   document.getElementById("namelist").innerHTML = "";
   for (let i = 0; i < getCookie("PlayerList").split(",").length; i++) {
