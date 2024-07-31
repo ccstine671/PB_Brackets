@@ -35,7 +35,7 @@ function AskRemove() {
 }
   
 function RemovePlayer() {
-  if AskRemove() {
+  if (AskRemove()) {
     removeA(players, document.getElementById('PlayerAdd').value);
 }
 }
