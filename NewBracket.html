@@ -16,7 +16,6 @@ name = "";
 name_total = "";
 const players = [];
 if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  alert(getCookie("PlayerList").split(",")[0])
   players.push(getCookie("PlayerList").split(","));
   document.getElementById("namelist").innerHTML = "";
   for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
@@ -56,13 +55,17 @@ function AskRemove() {
   
 function RemovePlayer() {
   if (AskRemove()) {
-    alert(players)
     removeA(players, document.getElementById('PlayerAdd').value);
-    alert(players)
     setCookie("PlayerList", players, 60);
-    checkCookie();
+    for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
+    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
+    }
+    document.getElementById("namelist").innerHTML = "";
+    document.getElementById("namelist").innerHTML = name;
+    name = ""
+  }
 }
-}
+  
 function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
   setCookie("PlayerList", players, 60);
@@ -97,18 +100,6 @@ function getCookie(cname) {
   return "";
 }
 
-function checkCookie() {
-  let user = getCookie("PlayerList");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 60);
-     }
-  }
-}
 </script>
 
-<body onload="checkCookie()"></body>
 </html>
