@@ -11,11 +11,9 @@
 <p id="namelist"></p>
   
 <script>
+const players = [];
 if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  players.push(getCookie("PlayerList"))}
-else {
-  const players = [];
-}
+  players.push(getCookie("PlayerList"));}
   
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
