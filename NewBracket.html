@@ -11,7 +11,7 @@
 <p id="namelist"></p>
   
 <script>
-if (getCookie("PlayerList") != null) {
+if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
   players.push(getCookie("PlayerList"))}
 else {
   const players = [];
