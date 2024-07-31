@@ -49,6 +49,7 @@
   <input type="button" value="REMOVE Player" onclick="RemovePlayer()">
   <input type="button" value="Add Player" onclick="AddPlayer()">
   <input type="button" value="Clear List" onclick="ResetList()">
+  <input type="button" value="Generate Bracket" onclick="NewBracket()">
 </form>
 
 <p id="namelist"></p>
@@ -87,6 +88,18 @@ function removeA(arr) {
 
 function AskRemove() {
   let answer = prompt("Are you sure you want to remove " + document.getElementById('PlayerAdd').value + " (yes or no)");
+  if (answer.toLowerCase() === "yes") {
+    return true;
+  } else if (answer.toLowerCase() === "no") {
+    return false;
+  } else {
+    alert("Please enter 'yes' or 'no'");
+    return AskRemove(question);
+  }
+}
+
+function AskGenerate() {
+  let answer = prompt("Are you sure you want to generate a bracket? (yes or no)");
   if (answer.toLowerCase() === "yes") {
     return true;
   } else if (answer.toLowerCase() === "no") {
@@ -142,6 +155,12 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+
+function NewBracket() {
+  if (AskGenerate()) {
+    setCookie("Final_Bracket", players, 60);
+  }
 }
 
 </script>
