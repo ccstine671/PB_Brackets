@@ -18,8 +18,8 @@ if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
   alert(getCookie("PlayerList").split(",")[0])
   players.push(getCookie("PlayerList").split(","));
   document.getElementById("namelist").innerHTML = "";
-  for (let i = 0; i < getCookie("PlayerList").split(",").length; i++) {
-    name += "Player " + (i+1) + ": " + players[i] + "<br>";
+  for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
+    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
 }
   document.getElementById("namelist").innerHTML = name;
 }
