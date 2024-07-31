@@ -6,6 +6,7 @@
   <input type="text" id="PlayerAdd" name="PlayerAdd"><br>
   <input type="button" value="REMOVE Player" onclick="RemovePlayer()">
   <input type="button" value="Add Player" onclick="AddPlayer()">
+  <input type="button" value="Clear List" onclick="ResetList()">
 </form>
 
 <p id="namelist"></p>
@@ -23,7 +24,11 @@ if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
 }
   document.getElementById("namelist").innerHTML = name;
 }
-  
+
+function ResetList() {
+  players.splice(0,players.length)
+  setCookie("PlayerList", players, 60);
+}
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
     while (L > 1 && arr.length) {
