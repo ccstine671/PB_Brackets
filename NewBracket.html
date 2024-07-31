@@ -48,7 +48,7 @@ function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
   setCookie("PlayerList", players, 60);
   for (let i = 0; i < players.length; i++) {
-    name += "Player " + i + ": " + players[i] + "<br>";
+    name += "Player " + (i+1) + ": " + players[i] + "<br>";
 }
   document.getElementById("namelist").innerHTML = name;
 }
