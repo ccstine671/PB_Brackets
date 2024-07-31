@@ -51,12 +51,13 @@ function RemovePlayer() {
   if (AskRemove()) {
     removeA(players, document.getElementById('PlayerAdd').value);
     setCookie("PlayerList", players, 60);
+    checkCookie();
 }
 }
 function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
   setCookie("PlayerList", players, 60);
-  for (let i = 0; i < players.length; i++) {
+  for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
     name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i];
 }
   name = "Players: " + name_total
