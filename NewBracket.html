@@ -4,8 +4,8 @@
 <form>
   <label for="PlayerAdd">Add Player:</label><br>
   <input type="text" id="PlayerAdd" name="PlayerAdd"><br>
+  <input type="button" value="REMOVE Player" onclick="RemovePlayer()">
   <input type="button" value="Add Player" onclick="AddPlayer()">
-  <input type="button" value="Remove Player" onclick="RemovePlayer()">
 </form>
 
 <?php
@@ -13,9 +13,38 @@ echo "I love you!";
 ?>
   
 <script>
+const players = [];
+
+--Remove Element from array
+function removeA(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
+
+--Ask user to verify removal
+function AskRemove() {
+  let answer = prompt("Are you sure you want to remove " + document.getElementById('PlayerAdd').value + " (yes or no)");
+  if (answer.toLowerCase() === "yes") {
+    return true;
+  } else if (answer.toLowerCase() === "no") {
+    return false;
+  } else {
+    alert("Please enter 'yes' or 'no'");
+    return AskRemove(question);
+  }
+  
+function RemovePlayer() {
+  if AskRemove() {
+    removeA(players, document.getElementById('PlayerAdd').value);
+}
 function AddPlayer() {
-var buySymbol= document.getElementById('PlayerAdd').value;
-var buyShares= document.getElementById('buyShares').value;
+players.push(document.getElementById('PlayerAdd').value);
 }
   
 function setCookie(cname,cvalue,exdays) {
