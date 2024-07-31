@@ -13,7 +13,7 @@
 <script>
 const players = [];
 if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  players.push(getCookie("PlayerList"));}
+  players.push(getCookie("PlayerList").split(','));}
   
 function removeA(arr) {
     var what, a = arguments, L = a.length, ax;
