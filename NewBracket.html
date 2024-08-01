@@ -160,7 +160,7 @@ function getCookie(cname) {
 function NewBracket() {
   if (AskGenerate()) {
     array_new = []
-    for(let i = 0; i < 16-players.length; i++) {
+    for(let i = 0; i < 16-(players.split(',')).length; i++) {
 	array_new.push('bye')
     }
     players.push(array_new)
