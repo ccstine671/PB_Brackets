@@ -342,12 +342,12 @@ for (let j = 1; j <= 4; j++) { /*number of rounds*/
   }
 }
 
-for (let i = 1; i <= array_names.length; i++) {
-  if (i%16 == 0) {
-    document.getElementById(array_names[i-1]).innerHTML = players[16];
+for (let i = 0; i <= array_names.length; i++) {
+  if (i%15 == 0) {
+    document.getElementById(array_names[i]).innerHTML = players[15];
   }
   else {
-    document.getElementById(array_names[i-1]).innerHTML = players[i%16];
+    document.getElementById(array_names[i]).innerHTML = players[i%15];
   }
 }
 	
@@ -373,6 +373,7 @@ window.onload = function() {
   for (let i = 0; i < (getCookie("Final_Bracket").split(',')).length; i++) {
     players.push((getCookie("Final_Bracket").split(','))[i]);
   }
+  alert(players
 };
 	
 </script>
