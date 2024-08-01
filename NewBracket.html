@@ -112,7 +112,9 @@ function AskGenerate() {
   
 function RemovePlayer() {
   if (AskRemove()) {
+    alert(players);
     removeA(players, document.getElementById('PlayerAdd').value);
+    alert(players);
     setCookie("PlayerList", players, 60);
     for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
     name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
