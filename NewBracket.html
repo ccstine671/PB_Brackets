@@ -165,7 +165,9 @@ function NewBracket() {
     alert(players.length)
     for(let i = 0; i < 16-players.length; i++) {
 	array_new.push('bye')
+	alert(array.length)
     }
+    alert(players)
     players.push(array_new)
     setCookie("Final_Bracket", players, 60);
   }
