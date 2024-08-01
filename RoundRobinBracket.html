@@ -334,6 +334,7 @@
 
 <script>
 /*to be called at the generate bracket step of the edit bracket tab*/
+alert(players);
 array_names = [];
 for (let j = 1; j <= 4; j++) { /*number of rounds*/
   for (let i = 1; i <= 16; i++) { /*number of players per round*/
@@ -344,10 +345,10 @@ for (let j = 1; j <= 4; j++) { /*number of rounds*/
 
 for (let i = 0; i <= array_names.length; i++) {
   if (i%15 == 0) {
-    document.getElementById(array_names[i]).innerHTML = players[15];
+    document.getElementById(array_names[i]).innerHTML = "";
   }
   else {
-    document.getElementById(array_names[i]).innerHTML = players[5];
+    document.getElementById(array_names[i]).innerHTML = "";
   }
 }
 	
