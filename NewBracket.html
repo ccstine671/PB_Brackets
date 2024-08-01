@@ -163,7 +163,7 @@ function NewBracket() {
   if (AskGenerate()) {
     array_new = []
     alert(players.length)
-    for(let i = 0; i < 16-(players.split(',')).length; i++) {
+    for(let i = 0; i < 16-players.length; i++) {
 	array_new.push('bye')
     }
     players.push(array_new)
