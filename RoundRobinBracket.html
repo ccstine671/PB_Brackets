@@ -269,6 +269,7 @@
 </html>
 
 <script>
+/*to be called at the generate bracket step of the edit bracket tab*/
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -285,6 +286,8 @@ function getCookie(cname) {
   return "";
 }
 
+document.getElementById("demo").innerHTML = cars;
+	
 window.onload = function() {
   getCookie("Final_Bracket");
   alert(getCookie("Final_Bracket"));
