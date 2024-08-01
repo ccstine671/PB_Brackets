@@ -358,6 +358,7 @@ for (let i = 1; i < array_names.length; i++) {
   }
   else {
     alert(players[(i%16)-1]);
+    alert(array_names[i-1]);
     document.getElementById(array_names[i-1]).innerHTML = players[(i%16)-1];
   }
 }
