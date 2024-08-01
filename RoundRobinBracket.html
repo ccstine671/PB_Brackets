@@ -342,12 +342,12 @@ for (let j = 1; j <= 4; j++) { /*number of rounds*/
   }
 }
 
-for (let i = 0; i < array_names.length; i++) {
-  if ((i+1)%16 == 0) {
-    document.getElementById(array_names[i]).innerHTML = players[16];
+for (let i = 1; i <= array_names.length; i++) {
+  if (i%16 == 0) {
+    document.getElementById(array_names[i-1]).innerHTML = players[16];
   }
   else {
-    document.getElementById(array_names[i]).innerHTML = players[(i+1)%16];
+    document.getElementById(array_names[i-1]).innerHTML = players[i%16];
   }
 }
 	
