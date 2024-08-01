@@ -59,7 +59,7 @@ name = "";
 name_total = "";
 const players = [];
 if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  for(i=0, i < (getCookie("PlayerList").split(",")).length, i++) {
+  for(let i=0, i < (getCookie("PlayerList").split(",")).length, i++) {
     players.push((getCookie("PlayerList").split(","))[i]);
   }
   document.getElementById("namelist").innerHTML = "";
