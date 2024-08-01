@@ -334,7 +334,14 @@
 
 <script>
 /*to be called at the generate bracket step of the edit bracket tab*/
-alert(players);
+	
+/*pull players names becuase I guess window.onload is localized*/	
+players = [];
+  for (let i = 0; i < (getCookie("Final_Bracket").split(',')).length; i++) {
+    players.push((getCookie("Final_Bracket").split(','))[i]);
+  }
+
+/*define dynamically named round/players */
 array_names = [];
 for (let j = 1; j <= 4; j++) { /*number of rounds*/
   for (let i = 1; i <= 16; i++) { /*number of players per round*/
@@ -343,12 +350,13 @@ for (let j = 1; j <= 4; j++) { /*number of rounds*/
   }
 }
 
-for (let i = 0; i <= array_names.length; i++) {
-  if (i%15 == 0) {
-    document.getElementById(array_names[i]).innerHTML = "";
+/*setting each dyn variable to the player name*/
+for (let i = 1; i <= array_names.length; i++) {
+  if (i%16 == 0) {
+    document.getElementById(array_names[i-1]).innerHTML = players[15];
   }
   else {
-    document.getElementById(array_names[i]).innerHTML = "";
+    document.getElementById(array_names[i-1]).innerHTML = players[(i%16)-1];
   }
 }
 	
