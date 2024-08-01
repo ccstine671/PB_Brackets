@@ -99,7 +99,7 @@ function AskRemove() {
 }
 
 function AskGenerate() {
-  let answer = prompt("Are you sure you want to generate a bracket? (yes or no)");
+  let answer = prompt("Are you sure you want to generate a new bracket? This will clear existing bracket (yes or no)");
   if (answer.toLowerCase() === "yes") {
     return true;
   } else if (answer.toLowerCase() === "no") {
