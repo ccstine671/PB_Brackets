@@ -162,13 +162,13 @@ function getCookie(cname) {
 function NewBracket() {
   if (AskGenerate()) {
     array_new = []
-    alert(players.length)
-    for(let i = 0; i < 16-players.length; i++) {
-	array_new.push('bye')
-	alert(array_new.length)
+    if (players.length < 16) {
+      for(let i = 0; i < 16-players.length; i++) {
+	  array_new.push('bye')
+	  alert(array_new.length)
+      }
+      players.push(array_new)
     }
-    alert(players)
-    players.push(array_new)
     setCookie("Final_Bracket", players, 60);
   }
 }
