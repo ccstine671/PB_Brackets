@@ -343,7 +343,12 @@ for (let j = 1; j <= 4; j++) { /*number of rounds*/
 }
 
 for (let i = 0; i < array_names.length; i++) {
-  document.getElementById(array_names[i]).innerHTML = "P1";	
+  if ((i+1)%16 == 0) {
+    document.getElementById(array_names[i]).innerHTML = players[16];
+  }
+  else {
+    document.getElementById(array_names[i]).innerHTML = players[(i+1)%16];
+  }
 }
 	
 function getCookie(cname) {
