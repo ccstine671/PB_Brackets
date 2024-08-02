@@ -340,7 +340,6 @@ players = [];
 for (let i = 0; i < (getCookie("Final_Bracket").split(',')).length; i++) {
   players.push((getCookie("Final_Bracket").split(','))[i]);
   }
-alert(players[0]);
 	
 /*define dynamically named round/players */
 array_names = [];
@@ -358,8 +357,8 @@ for (let i = 1; i < array_names.length; i++) {
   }
   else {
     /*alert(players[(i%16)-1]);*/
-    alert(array_names[i-1]);
-    document.getElementById(array_names[i-1]).innerHTML = "hello" /*players[(i%16)-1];*/
+    /*alert(array_names[i-1]);*/
+    document.getElementById(array_names[i-1]).innerHTML = players[(i%16)-1];
   }
 }
 	
@@ -380,12 +379,10 @@ function getCookie(cname) {
 }
 	
 window.onload = function() {
-  alert(getCookie("Final_Bracket"));
   players = [];
   for (let i = 0; i < (getCookie("Final_Bracket").split(',')).length; i++) {
     players.push((getCookie("Final_Bracket").split(','))[i]);
   }
-  alert(players);
 };
 	
 </script>
