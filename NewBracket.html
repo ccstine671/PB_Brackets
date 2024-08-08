@@ -57,6 +57,7 @@
 <script>
 alert(localStorage.getItem("PlayerList"));
 localStorage.setitem("PlayerList") = ["Hello","Beginning"];
+alert(localStorage.getItem("PlayerList"));
 name = "";
 name_total = "";
 const players = [];
@@ -119,7 +120,7 @@ function RemovePlayer() {
     removeA(players, document.getElementById('PlayerAdd').value);
     localStorage.setItem("PlayerList", players);
     for (let i = 0; i < (localStorage.getItem("PlayerList").split(",")).length; i++) {
-    name += "Player " + (i+1) + ": " + (localStorage.getItem("PlayerList")..split(","))[i] + "<br>";
+    name += "Player " + (i+1) + ": " + (localStorage.getItem("PlayerList").split(","))[i] + "<br>";
     }
     document.getElementById("namelist").innerHTML = "";
     document.getElementById("namelist").innerHTML = name;
