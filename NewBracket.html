@@ -58,13 +58,13 @@
 name = "";
 name_total = "";
 const players = [];
-if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
-  for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
-    players.push((getCookie("PlayerList").split(","))[i]);
+if (localStorage.getItem("PlayerList") != null && localStorage.getItem("PlayerList") != "") {
+  for (let i = 0; i < (localStorage.getItem("PlayerList").split(",")).length; i++) {
+    players.push((localStorage.getItem("PlayerList").split(","))[i]);
   }
   document.getElementById("namelist").innerHTML = "";
-  for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
-    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
+  for (let i = 0; i < (localStorage.getItem("PlayerList").split(",")).length; i++) {
+    name += "Player " + (i+1) + ": " + (localStorage.getItem("PlayerList").split(","))[i] + "<br>";
 }
   document.getElementById("namelist").innerHTML = name;
   name = "";
@@ -73,7 +73,7 @@ if (getCookie("PlayerList") != null && getCookie("PlayerList") != "") {
 function ResetList() {
   if (AskRemove()) {
     players.splice(0,players.length)
-    setCookie("PlayerList", players, 60);
+    localStorage.setItem("PlayerList", players);
     document.getElementById("namelist").innerHTML = "";
   }
 }
@@ -115,9 +115,9 @@ function AskGenerate() {
 function RemovePlayer() {
   if (AskRemove()) {
     removeA(players, document.getElementById('PlayerAdd').value);
-    setCookie("PlayerList", players, 60);
-    for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
-    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
+    localStorage.setItem("PlayerList", players);
+    for (let i = 0; i < (localStorage.getItem("PlayerList").split(",")).length; i++) {
+    name += "Player " + (i+1) + ": " + (localStorage.getItem("PlayerList")..split(","))[i] + "<br>";
     }
     document.getElementById("namelist").innerHTML = "";
     document.getElementById("namelist").innerHTML = name;
@@ -127,9 +127,9 @@ function RemovePlayer() {
   
 function AddPlayer() {
   players.push(document.getElementById('PlayerAdd').value);
-  setCookie("PlayerList", players, 60);
-  for (let i = 0; i < (getCookie("PlayerList").split(",")).length; i++) {
-    name += "Player " + (i+1) + ": " + (getCookie("PlayerList").split(","))[i] + "<br>";
+  localStorage.setItem("PlayerList", players);
+  for (let i = 0; i < (localStorage.getItem("PlayerList").split(",")).length; i++) {
+    name += "Player " + (i+1) + ": " + (localStorage.getItem("PlayerList").split(","))[i] + "<br>";
   }
   document.getElementById("namelist").innerHTML = "";
   document.getElementById("namelist").innerHTML = name;
@@ -169,7 +169,7 @@ function NewBracket() {
       }
       players.push(array_new)
     }
-    setCookie("Final_Bracket", players, 60);
+    localStorage.setItem("Final_Bracket"), players);
   }
 }
 
