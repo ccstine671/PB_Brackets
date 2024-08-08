@@ -1,1 +1,2 @@
-
+permissions:
+  id-token: write
